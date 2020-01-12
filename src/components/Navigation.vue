@@ -1,39 +1,66 @@
 <template>
-  <v-navigation-drawer fixed mini-variant>
+  <v-navigation-drawer class="sidebar" fixed mini-variant permanent>
     <div class="nav d-flex flex-column align-center">
-      <v-tooltip right nudge-right="25" content-class="tooltip">
+      <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
-          <v-icon class="active" large v-on="on">home</v-icon>
+          <v-icon
+            :class="{'active': activeSection == 'home'}"
+            class="nav-icon"
+            v-on="on"
+            @click="scrollTo('home')"
+          >icon-home</v-icon>
         </template>
-        <span class="font-weight-bold">Home</span>
+        <span class="text--primary font-weight-bold">Home</span>
       </v-tooltip>
 
-      <v-tooltip right nudge-right="25">
+      <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
-          <v-icon large v-on="on">people</v-icon>
+          <v-icon
+            :class="{'active': activeSection == 'about'}"
+            class="nav-icon"
+            v-on="on"
+            @click="scrollTo('about')"
+          >icon-about</v-icon>
         </template>
-        <span class="font-weight-bold">About</span>
+        <span class="text--primary font-weight-bold">About</span>
       </v-tooltip>
 
-      <v-tooltip right nudge-right="25">
+      <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
-          <v-icon large v-on="on">work</v-icon>
+          <v-icon
+            :class="{'active': activeSection == 'portfolio'}"
+            class="nav-icon"
+            v-on="on"
+            @click="scrollTo('portfolio')"
+          >icon-portfolio</v-icon>
         </template>
-        <span class="font-weight-bold">Portfolio</span>
+        <span class="text--primary font-weight-bold">Portfolio</span>
       </v-tooltip>
 
-      <v-tooltip right nudge-right="25">
+      <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
-          <v-icon large v-on="on">mail</v-icon>
+          <v-icon
+            :class="{'active': activeSection == 'contact'}"
+            class="nav-icon"
+            v-on="on"
+            @click="scrollTo('contact')"
+          >icon-contact</v-icon>
         </template>
-        <span class="font-weight-bold">Contact</span>
+        <span class="text--primary font-weight-bold">Contact</span>
       </v-tooltip>
     </div>
   </v-navigation-drawer>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["activeSection"],
+  methods: {
+    scrollTo(to) {
+      this.$vuetify.goTo(`#${to}`);
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -45,21 +72,24 @@ export default {};
   }
 }
 
-.v-navigation-drawer {
-  background-color: rgba($primary, 0.85) !important;
+.v-navigation-drawer.sidebar {
+  background-color: rgba(#1e1e1f, 0.85);
 }
 
-.v-icon {
-  color: $secondary !important;
+.v-icon.nav-icon {
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  color: var(--v-secondary-base);
   cursor: pointer;
+  transition: 0.2s all;
+
+  &:hover {
+    color: var(--v-accent-base);
+  }
 
   &.active {
-    color: $node-light !important;
+    color: var(--v-accent-base);
   }
-}
-
-.v-tooltip__content {
-  background-color: $node-light !important;
-  color: $primary !important;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div v-intersect="onIntersect">
     <div class="section">
-      <h1 class="white--text title section-title">Who is Behind All This</h1>
+      <h1 class="white--text title section-title">Get in touch with us</h1>
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   methods: {
     onIntersect(entries, observer) {
       this.$emit("activeSectionChange", {
-        section: "about",
+        section: "contact",
         isIntersecting: entries[0].isIntersecting
       });
     }
@@ -20,5 +20,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
