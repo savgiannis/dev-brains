@@ -20,8 +20,6 @@
           <use xlink:href="@/assets/sprite.svg#icon-js" />
         </svg>
       </div>
-
-      <div class="scroll-down-button white--text" @click="scrollDown"></div>
     </div>
   </div>
 </template>

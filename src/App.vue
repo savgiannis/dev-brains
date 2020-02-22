@@ -8,6 +8,7 @@
         <div class="wrapper">
           <Home id="home" @activeSectionChange="onActiveSectionChange" />
           <About id="about" @activeSectionChange="onActiveSectionChange" />
+          <Stack id="stack" @activeSectionChange="onActiveSectionChange" />
           <Portfolio id="portfolio" @activeSectionChange="onActiveSectionChange" />
           <Contact id="contact" @activeSectionChange="onActiveSectionChange" />
           <Footer id="footer" />
@@ -24,6 +25,7 @@ import Footer from "@/components/Footer";
 
 import Home from "@/views/Home";
 import About from "@/views/About";
+import Stack from "@/views/Stack";
 import Portfolio from "@/views/Portfolio";
 import Contact from "@/views/Contact";
 
@@ -31,6 +33,7 @@ export default {
   components: {
     Home,
     About,
+    Stack,
     Portfolio,
     Contact,
     BackgroundImage,

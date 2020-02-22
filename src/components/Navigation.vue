@@ -28,6 +28,18 @@
       <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
           <v-icon
+            :class="{'active': activeSection == 'stack'}"
+            class="nav-icon"
+            v-on="on"
+            @click="scrollTo('stack')"
+          >icon-stack-1</v-icon>
+        </template>
+        <span class="text--primary font-weight-bold">Technologies</span>
+      </v-tooltip>
+
+      <v-tooltip right nudge-right="25" color="accent">
+        <template v-slot:activator="{ on }">
+          <v-icon
             :class="{'active': activeSection == 'portfolio'}"
             class="nav-icon"
             v-on="on"
