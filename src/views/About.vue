@@ -20,7 +20,7 @@
         </div>
 
         <div class="image-container order-first">
-          <img src="../assets/steeve_jobs.jpg" />
+          <img style="height:380px; width:auto;" src="../assets/kleo.jpg" />
         </div>
       </div>
     </div>
