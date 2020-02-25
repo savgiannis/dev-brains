@@ -25,7 +25,7 @@
         <span class="text--primary font-weight-bold">About</span>
       </v-tooltip>
 
-      <v-tooltip right nudge-right="25" color="accent">
+      <!-- <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
           <v-icon
             :class="{'active': activeSection == 'stack'}"
@@ -35,7 +35,7 @@
           >icon-stack-1</v-icon>
         </template>
         <span class="text--primary font-weight-bold">Technologies</span>
-      </v-tooltip>
+      </v-tooltip> -->
 
       <v-tooltip right nudge-right="25" color="accent">
         <template v-slot:activator="{ on }">
@@ -85,7 +85,7 @@ export default {
 }
 
 .v-navigation-drawer.sidebar {
-  background-color: rgba(#1e1e1f, 0.85);
+  background-color: #212121;
 }
 
 .v-icon.nav-icon {

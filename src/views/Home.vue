@@ -1,24 +1,26 @@
 <template>
   <div v-intersect="onIntersect">
     <div class="section section home d-flex flex-column justify-center align-center">
-      <h1 class="display-2 font-weight-bold white--text text-center mb-8">Hello! We are Dev Brains</h1>
+      <div class="inner d-flex flex-column justify-center align-center">
+        <h1 class="display-2 font-weight-bold white--text text-center mb-8">Hello! We are Dev Brains</h1>
 
-      <div class="headline white--text mb-1">We create</div>
+        <div class="headline white--text mb-1">We create</div>
 
-      <div
-        class="headline white--text mb-1"
-      >web/mobile/desktop applications, e-commerce platforms and CMS websites</div>
+        <div
+          class="headline white--text mb-1"
+        >web/mobile/desktop applications, e-commerce platforms and CMS websites</div>
 
-      <div class="headline white--text mb-8">with</div>
+        <div class="headline white--text mb-8">with</div>
 
-      <div class="d-flex align-center justify-center">
-        <svg class="icon heart mr-4">
-          <use xlink:href="@/assets/sprite.svg#icon-heart" />
-        </svg>
-        <div class="headline white--text mr-4">and</div>
-        <svg class="icon js">
-          <use xlink:href="@/assets/sprite.svg#icon-js" />
-        </svg>
+        <div class="d-flex align-center justify-center">
+          <svg class="icon heart mr-4">
+            <use xlink:href="@/assets/sprite.svg#icon-heart" />
+          </svg>
+          <div class="headline white--text mr-4">and</div>
+          <svg class="icon js">
+            <use xlink:href="@/assets/sprite.svg#icon-js" />
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +43,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.inner{
+  background-color: #212121;
+  padding: 40px;
+  border-radius: 8px;
+}
 .icon {
   height: 70px;
   width: 70px;

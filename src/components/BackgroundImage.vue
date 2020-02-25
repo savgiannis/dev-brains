@@ -16,9 +16,9 @@ export default {};
   right: 0;
   bottom: 0;
 
-  background-image: url("../assets/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #37474f;
 }
 </style>

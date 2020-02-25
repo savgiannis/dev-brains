@@ -1,6 +1,6 @@
 <template>
   <div v-intersect="onIntersect">
-    <div class="section">
+    <div class="section about">
       <h1 class="white--text title section-title">Who is Behind All This</h1>
 
       <div class="d-flex mt-10">
@@ -20,7 +20,69 @@
         </div>
 
         <div class="image-container order-first">
-          <img style="height:380px; width:auto;" src="../assets/kleo.jpg" />
+          <img src="../assets/steeve_jobs.jpg" />
+        </div>
+      </div>
+
+      <h1 class="white--text title section-title mt-12">Our tech stack</h1>
+
+      <div class="d-flex flex-wrap mt-12">
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/vue.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Vue</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/nuxt.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Nuxt</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/node.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Node</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/mongo.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">MongoDB</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/firebase.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Firebase</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/ionic.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Ionic</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/electron.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Electron</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/strapi.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Strapi</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/docker.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Docker</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/jenkins.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular">Jenkins</h3>
+        </div>
+
+        <div class="card pa-5 d-flex align-center mr-5 mb-5">
+          <img src="../assets/SVG/azure.svg" class="mr-5" />
+          <h3 class="white--text subtitle-2 font-weight-regular text-center">
+            Microsoft
+            <br />Azure
+          </h3>
         </div>
       </div>
     </div>
@@ -53,6 +115,25 @@ export default {
     right: 0;
     width: 100%;
     object-fit: cover;
+    height: 100%;
   }
+}
+
+.logos {
+  margin-top: 50px;
+  display: flex;
+  & > * {
+    margin-right: 20px;
+  }
+}
+
+img {
+  height: 50px;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 8px;
+  width: auto;
 }
 </style>

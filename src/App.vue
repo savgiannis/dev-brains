@@ -8,7 +8,7 @@
         <div class="wrapper">
           <Home id="home" @activeSectionChange="onActiveSectionChange" />
           <About id="about" @activeSectionChange="onActiveSectionChange" />
-          <Stack id="stack" @activeSectionChange="onActiveSectionChange" />
+          <!-- <Stack id="stack" @activeSectionChange="onActiveSectionChange" /> -->
           <Portfolio id="portfolio" @activeSectionChange="onActiveSectionChange" />
           <Contact id="contact" @activeSectionChange="onActiveSectionChange" />
           <Footer id="footer" />
@@ -33,7 +33,7 @@ export default {
   components: {
     Home,
     About,
-    Stack,
+    // Stack,
     Portfolio,
     Contact,
     BackgroundImage,
@@ -83,12 +83,17 @@ export default {
 
 .section {
   height: 100vh;
-  background-color: rgba(#1e1e1f, 0.85);
+  background-color: #212121;
   padding: 40px;
+  border-radius: 8px;
 
   &.home {
     background-color: transparent;
     position: relative;
+  }
+
+  &.about {
+    height: 130vh;
   }
 
   &.footer {
