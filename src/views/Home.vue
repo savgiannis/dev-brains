@@ -1,7 +1,7 @@
 <template>
   <div v-intersect="onIntersect">
     <div class="section section home d-flex flex-column justify-center align-center">
-      <div class="inner d-flex flex-column justify-center align-center">
+      <div class="inner d-flex flex-column justify-center align-center mt-auto">
         <h1 class="display-2 font-weight-bold white--text text-center mb-8">Hello! We are Dev Brains</h1>
 
         <div class="headline white--text mb-1">We create</div>
@@ -22,6 +22,9 @@
           </svg>
         </div>
       </div>
+
+      <div class="scroll-down-button mt-auto"></div>
+      <div class="body-1 mt-2 white--text">SCROLL</div>
     </div>
   </div>
 </template>
@@ -43,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.inner{
+.inner {
   background-color: #212121;
   padding: 40px;
   border-radius: 8px;
@@ -62,30 +65,23 @@ export default {
 }
 
 .scroll-down-button {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  position: relative;
   cursor: pointer;
-  transform: rotate(-46deg);
-  animation: scroll-button-animation 2s infinite;
-}
 
-@keyframes scroll-button-animation {
-  0% {
-    transform: rotate(-46deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-46deg) translate(-20px, 20px);
-    opacity: 0;
+  &:before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
   }
 }
 </style>
